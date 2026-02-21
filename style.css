@@ -152,16 +152,9 @@ button {
   max-width: var(--max-width);
   margin-inline: auto;
   padding-inline: 2rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-}
-
-.hero-text {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .hero-headline {
@@ -170,6 +163,20 @@ button {
   line-height: 1.1;
   letter-spacing: -0.03em;
   color: var(--black);
+  white-space: nowrap;
+}
+
+.hero-columns {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .hero-features {
@@ -195,6 +202,28 @@ button {
   height: 6px;
   background: var(--black);
   border-radius: 50%;
+}
+
+.hero-platforms {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.platform-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gray-600);
+}
+
+.platform-icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
 }
 
 .hero-cta {
@@ -262,7 +291,7 @@ button {
 
 .plugin-card {
   display: grid;
-  grid-template-columns: 480px 1fr;
+  grid-template-columns: 1fr 1fr;
   background: transparent;
   border-radius: 6px;
   overflow: hidden;
@@ -491,7 +520,11 @@ button {
    RESPONSIVE
    ══════════════════════════════════════════════════════ */
 @media (max-width: 900px) {
-  .hero-inner {
+  .hero-headline {
+    white-space: normal;
+  }
+
+  .hero-columns {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
