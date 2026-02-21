@@ -257,37 +257,33 @@ button {
 .plugin-list {
   display: flex;
   flex-direction: column;
-  gap: 1px;           /* hairline between cards */
-  background: var(--gray-200);
-  border: 1px solid var(--gray-200);
-  border-radius: 8px;
-  overflow: hidden;
+  gap: 1rem;
 }
 
 .plugin-card {
   display: grid;
   grid-template-columns: 480px 1fr;
-  background: var(--white);
-  transition: background 0.15s;
+  background: transparent;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
-.plugin-card:hover { background: var(--gray-50); }
+
+.plugin-card:nth-child(odd) .plugin-image-wrap { order: 2; }
+.plugin-card:nth-child(odd) .plugin-info       { order: 1; }
 
 .plugin-image-wrap {
   overflow: hidden;
   aspect-ratio: 16 / 10;
   background: var(--gray-100);
-  border-right: 1px solid var(--gray-200);
 }
 
 .plugin-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.35s ease;
+  border-radius: 6px;
 }
-
-.plugin-card:hover .plugin-image { transform: scale(1.02); }
 
 
 .plugin-info {
@@ -509,8 +505,7 @@ button {
   }
 
   .plugin-image-wrap {
-    border-right: none;
-    border-bottom: 1px solid var(--gray-200);
+    border-radius: 6px 6px 0 0;
   }
 
   .plugin-info {
