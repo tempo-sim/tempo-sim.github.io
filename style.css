@@ -179,6 +179,12 @@ button {
   gap: 2rem;
 }
 
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--gray-600);
+  line-height: 1.5;
+}
+
 .hero-features {
   display: flex;
   flex-direction: column;
@@ -278,7 +284,7 @@ button {
 }
 
 .section-subtitle {
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: var(--gray-600);
   margin-bottom: 3rem;
 }
