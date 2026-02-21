@@ -543,6 +543,9 @@ button {
     grid-template-columns: 1fr;
   }
 
+  .plugin-card:nth-child(odd) .plugin-image-wrap { order: 0; }
+  .plugin-card:nth-child(odd) .plugin-info       { order: 0; }
+
   .plugin-image-wrap {
     border-radius: 6px 6px 0 0;
   }
