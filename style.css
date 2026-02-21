@@ -289,10 +289,6 @@ button {
 
 .plugin-card:hover .plugin-image { transform: scale(1.02); }
 
-/* Placeholder appearance when image is missing */
-.plugin-image[src$=".jpg"]:not([complete]) {
-  display: none;
-}
 
 .plugin-info {
   padding: 2.5rem 3rem;
